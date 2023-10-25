@@ -1,0 +1,35 @@
+﻿@using Search.Models.Users
+@model IEnumerable<User>
+
+@{
+	ViewData["Title"] = "Search Users";
+}
+
+<div class="text-center">
+	<h1 class="display-4">Welcome</h1>
+	<p> <h3>User Search </h3></p>
+</div>
+
+<div>
+	<span><h6>Search text goes here..</h6></span>
+	<input id="Search" />	<input class="btn-primary" type="button" id="btnSearch" value="Search" style="margin-left: 2%;margin-bottom: 20px;" />
+</div>
+<div>
+	<div id="errorMsg"></div>
+	<table class="table table-striped grid-table">
+		<thread>
+			<tr>
+				<td>Id</td>
+				<td>FirstName</td>
+				<td>LastName</td>
+				<td>Email Address</td>
+				<td>Gender</td>
+			</tr>
+		</thread>
+		<tbody id="tbody">
+		</tbody>
+	</table>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/scripts/user.js" asp-append-version="true"></script>
